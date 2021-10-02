@@ -22,12 +22,14 @@ class Song:
         else:
             self.animals_for_song = animals_for_song
 
+    def generarCancionConUnAnimal (self) :
+        return self.final_verse_of_the_song.format(self.animals_for_song[0])
+
     def adapt_original_lyrics(self):
 
-        numeroDeAnimal = 1
-        if len(self.animals_for_song) == numeroDeAnimal:
-            final_verse_of_the_song = self.final_verse_of_the_song.format(self.animals_for_song[0])
-            return final_verse_of_the_song
+        CancionConUnAnimal = 1
+        if len(self.animals_for_song) == CancionConUnAnimal:
+            return self.generarCancionConUnAnimal()
         else:
             amount_of_animals = len(self.animals_for_song)
             final_song = ""
